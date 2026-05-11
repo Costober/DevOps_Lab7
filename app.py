@@ -6,8 +6,6 @@ import numpy as np
 
 app = Flask(__name__)
 
-# --- Математична логіка з ЛР3-ЛР4 ---
-
 def f(x):
     return x**4 - 18*x**2 + 6
 
@@ -34,11 +32,9 @@ def jacobi_method(A, b, eps=0.01, max_iter=500):
         x = x_new
     return x.tolist(), max_iter
 
-# --- Ендпоінт API ---
-
 @app.route('/calculate', methods=['GET', 'POST'])
 def calculate():
-    # Визначаємо метод (за замовчуванням 'secant')
+    # Визначаємо метод 
     method = request.args.get('method', 'secant')
 
     if method == 'secant':
@@ -54,7 +50,7 @@ def calculate():
         })
 
     elif method == 'jacobi':
-        # Дані для методу Якобі (використовуємо матрицю з вашої ЛР)
+        # Дані для методу Якобі 
         A = np.array([
             [3, 1, 0, 0],
             [1, 4, -1, 0],
