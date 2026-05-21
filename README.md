@@ -9,4 +9,5 @@
 * **Платформа:** Render
 * **Тип розгортання:** Auto deployment через GitHub Webhooks
 * **Публічна адреса сервісу:** https://devops-233-kuzmenko.onrender.com/calculate?method=secant&x0=-5&x1=0
+
 https://devops-233-kuzmenko.onrender.com/calculate?method=jacobi
